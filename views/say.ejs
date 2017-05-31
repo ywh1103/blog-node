@@ -1,0 +1,23 @@
+<%- include header %>
+<div style="width: 1000px;margin:30px auto">
+<form action="/users/list" method="post">
+    内容：<textarea name="con" class="con form-control"></textarea><br><br>
+    <input type="submit" value="留言"class="btn btn-success">
+</form>
+</div>
+<div style="width:1000px;margin:30px auto">
+<table class="table">
+    <tr class="ltr">
+        <td class="lzi">楼层</td>
+        <td class="lzi">内容</td>
+    </tr>
+    <%  shuju.forEach(function(item,index){  %>
+    <tr>
+        <td><%- index+1  %></td>
+        <td><%- item.con %></td>
+    </tr>
+    <%  }) %>
+</table>
+</div>
+<%- include footer %>
+

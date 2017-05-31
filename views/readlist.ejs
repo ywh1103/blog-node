@@ -1,0 +1,15 @@
+
+<table>
+    <tr>
+        <td>标题</td>
+        <td>内容</td>
+    </tr>
+
+    <%  shuju.forEach(function(item,index){  %>
+    <tr>
+        <td><%- item.titi  %></td>
+        <td><%- item.con %></td>
+    </tr>
+<%  }) %>
+</table>
+<%- include footer %>

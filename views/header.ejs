@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title><%= title %> - Blog</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<audio src="/music/丁可 - If.mp3" autoplay></audio>
+<nav class="navbar navbar-inverse" role="navigation" style="background-color: #c9eadc;border: none;box-shadow: 0 0 10px #fff">
+    <div class="container">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="/">YWHBlog</a>
+            </div>
+            <a class="navbar-brand" href="/">首页</a>
+            <img src="images/1.jpeg" style="height:40px;width:40px;border-radius: 50%;margin-top: 5px;" alt="">
+            <ul class="nav navbar-nav navbar-right">
+                <% if(user){ %>
+                <li><a href="/post" title="发表文章">发表文章</a></li>
+                <li><a href="/say" title="留言">留言</a></li>
+                <li><a href="/logout">登出</a></li>
+                <%}else{%>
+                <li><a href="/reg"> 注册</a></li>
+                <li><a href="/login">登录</a></li>
+                <%}%>
+            </ul>
+        </div>
+    </div>
+</nav>
+<div class="container">
+    <div>
+        <h3 id="biao"><%= title %></h3>
+        <div class="userArea" id="na">
+            <% if(user) {%>
+            <span>用户：<%= user.username %></span>
+            <% } else { %>
+            <span>用户：游客</span>
+            <% } %>
+        </div>
+    </div>
+    <hr />
+    <div class="col-sm-12">
+    </div>
+</div>

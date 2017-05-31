@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+  <%- include header %>
+  <form>
+    <div class="input-group">
+      <input type="text" class="form-control" placeholder="SEARCH" name="keyword">
+      <span class="input-group-btn">
+            <input type="submit" value="搜索" class="btn btn-default" />
+        </span>
+    </div>
+  </form>
+
+  <ul class="list-group">
+    <li class="list-group-item">
+      <h3><a href="#">个人博客</a></h3>
+      <p class="info">
+        <span>作者：疯跑时光</span>
+        <span>|</span>
+        <span>日期：2016-12-14</span>
+      </p>
+    </li>
+    <hr/>
+  </ul>
+
+
+  <div class="box">
+      <%  shuju.forEach(function(item,index){  %>
+    <div class="con">
+      <p class="bti"><%- item.title %></p>
+      <hr/>
+      <div class="txtareas"><%- item.article%></div>
+    </div>
+      <%  }) %>
+  </div>
+
+
+
+
+
+
+
+  <%- include footer %>
+  </body>
+</html>
